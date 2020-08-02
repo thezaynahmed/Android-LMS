@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/add_teacher_card_popup"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_add_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:startIconDrawable="@drawable/ic_subject"
+            android:hint="@string/subjects_name"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            android:textAppearance="@font/roboto"
+            android:layout_marginTop="5dp"
+            app:counterEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_subject_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/add_subjects_btn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/add_subjects"
+            app:iconPadding="4dp"
+            android:layout_marginTop="78dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_gravity="bottom|center"/>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

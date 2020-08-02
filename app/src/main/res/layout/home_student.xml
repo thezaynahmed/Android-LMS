@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View android:id="@+id/strut"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"/>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/classWordCard"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:layout_alignEnd="@id/strut"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:rippleColor="@color/colorPrimary"
+            app:cardCornerRadius="14dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:checkable="true"
+            android:background="@drawable/myshadow"
+            app:cardElevation="8dp"
+            >
+            <TextView
+                android:id="@+id/classwork_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/classwork"
+                android:layout_gravity="center_horizontal"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginTop="8dp"
+                />
+
+            <ImageView
+                android:id="@+id/classwork_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="4dp"
+                android:src="@drawable/classwork"
+                android:contentDescription="@string/classwork_image" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/homeWorkCard"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_alignStart="@id/strut"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp">
+
+            <TextView
+                android:id="@+id/homework_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/homework"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+            <ImageView
+                android:id="@+id/homework_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:src="@drawable/homework"
+                android:contentDescription="@string/homeworkImg" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/activitiesCard"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/classWordCard"
+            android:layout_alignEnd="@id/strut"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:rippleColor="@color/colorPrimary"
+            android:clickable="true"
+            android:focusable="true"
+            android:checkable="true"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            >
+            <TextView
+                android:id="@+id/Activities_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="Activities"
+                android:layout_gravity="center_horizontal"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginTop="8dp"
+                />
+
+            <ImageView
+                android:id="@+id/activities_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:src="@drawable/developer_activity"
+                android:contentDescription="@string/activities_image"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/projectsCard"
+            android:layout_marginBottom="16dp"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_alignStart="@id/strut"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/homeWorkCard"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            app:rippleColor="@color/colorPrimary"
+            >
+            <TextView
+                android:id="@+id/projects_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="Projects"
+                android:layout_gravity="center_horizontal"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginTop="8dp"
+                />
+            <ImageView
+                android:id="@+id/projects_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:src="@drawable/projects"
+                android:contentDescription="@string/projects_img"/>
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+</RelativeLayout>

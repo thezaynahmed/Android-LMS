@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ui2"
+    tools:context=".StudentDashboard">
+
+    <ImageView
+        android:id="@+id/profilePic"
+        android:padding="10dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/zainahmed"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:foreground="@drawable/frame"
+        />
+
+    <ImageView
+        android:id="@+id/notification_icon"
+        android:padding="10dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_notifications"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        />
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:text="@string/welcome"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/roboto"
+        android:textSize="18sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="4dp"
+        android:layout_toRightOf="@id/profilePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/std_name"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginStart="4dp"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/profilePic"
+        android:layout_below="@id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profilePic"
+        android:layout_marginBottom="16dp"
+        android:fillViewport="true">
+<FrameLayout
+    android:id="@+id/frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    >
+</FrameLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/student_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:elevation="8dp"
+        android:layout_alignParentBottom="true"
+        app:itemRippleColor="@color/colorPrimary"
+        app:menu="@menu/bottom_nav_student" />
+
+</RelativeLayout>
+
+<!--<com.google.android.material.card.MaterialCardView-->
+<!--android:id="@+id/activitiesCard"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"/>-->
+
+<!--<com.google.android.material.card.MaterialCardView-->
+<!--android:id="@+id/projectsCard"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"/>-->

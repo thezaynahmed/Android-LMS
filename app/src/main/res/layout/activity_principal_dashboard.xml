@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ui2"
+    tools:context=".PrincipalDashboard">
+    <ImageView
+        android:id="@+id/profile_pic_principle"
+        android:padding="10dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/zainahmed"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:foreground="@drawable/frame"
+        />
+
+    <ImageView
+        android:id="@+id/notification_icon"
+        android:padding="10dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_notifications"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        />
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:text="@string/welcome"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/roboto"
+        android:textSize="18sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="4dp"
+        android:layout_toRightOf="@id/profile_pic_principle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/principal_name"
+        android:text="Principle / Managment"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginStart="4dp"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/profile_pic_principle"
+        android:layout_below="@id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/admins_card"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="82dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        app:rippleColor="@color/colorPrimary"
+        app:cardCornerRadius="14dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:checkable="true"
+        android:background="@drawable/myshadow"
+        app:cardElevation="8dp"
+        >
+
+        <TextView
+        android:id="@+id/total_teachers_principle"
+        android:text="Total Teachers:"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="8dp"
+        android:layout_marginStart="8dp"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/total_students_principle"
+            android:text="Total Students:"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_daily_activities_of_child"
+            android:layout_width="154dp"
+            android:layout_height="64dp"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            app:icon="@drawable/ic_account"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="72dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/manage_teachers_attendance"
+            android:fontFamily="@font/roboto_bold"
+            android:padding="6dp"
+            android:textSize="10sp" />
+        <ImageView
+            android:id="@+id/img_principle"
+            android:layout_width="145dp"
+            android:layout_height="145dp"
+            android:layout_gravity="right|center"
+            android:contentDescription="@string/principle_image"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/manager" />
+    </com.google.android.material.card.MaterialCardView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/admins_card"
+        android:layout_marginBottom="9dp"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-1dp"
+            android:padding="8dp">
+            <View
+                android:id="@+id/strut"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/students_reportss_card"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_alignEnd="@id/strut"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/myshadow"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="8dp"
+                app:rippleColor="@color/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/students_reports_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="@string/students_reports"
+                    android:padding="18dp"
+                    android:src="@drawable/report" />
+
+                <TextView
+                    android:id="@+id/students_reports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:textAlignment="center"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/students_reports"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/teachers_report_card"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_alignStart="@id/strut"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:rippleColor="@color/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/teachers_report_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="26dp"
+                    android:contentDescription="@string/teachers_report"
+                    android:padding="8dp"
+                    android:src="@drawable/performance" />
+
+                <TextView
+                    android:id="@+id/teachers_report_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/teachers_report"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/view_staff_activity_card"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_below="@+id/students_reportss_card"
+                android:layout_alignEnd="@id/strut"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:rippleColor="@color/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/view_staff_activity_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:contentDescription="@string/view_staff_activity"
+                    android:padding="6dp"
+                    android:src="@drawable/developer_activity" />
+
+                <TextView
+                    android:id="@+id/view_staff_activity_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:textAlignment="center"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/view_staff_activity"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/wards_assessment_report_card"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_below="@+id/teachers_report_card"
+                android:layout_alignStart="@id/strut"
+                android:layout_alignEnd="@id/strut"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="52dp"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:rippleColor="@color/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/wards_assessment_report_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="38dp"
+                    android:padding="2dp"
+                    android:src="@drawable/detailed_analysis"
+                    android:contentDescription="@string/individual_and_group_based_exam_marks_text" />
+
+                <TextView
+                    android:id="@+id/individual_and_group_based_exam_marks_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/view_individual_and_group_based_exam_marks"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+            </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/principle_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:elevation="8dp"
+        android:layout_alignParentBottom="true"
+        app:itemRippleColor="@color/colorPrimary"
+        app:menu="@menu/bottom_nav_admin" />
+</RelativeLayout>
